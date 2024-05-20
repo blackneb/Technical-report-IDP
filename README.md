@@ -71,16 +71,19 @@ const socket = new WebSocket('ws://127.0.0.1:8000/ws/some_endpoint/');
 socket.onmessage = function(event) {
     console.log('Message from server ', event.data);
 };
+```
 
 ## API Endpoints
+
+### GET Endpoints
 
 Here is a list of available GET API endpoints:
 
 | Method | Endpoint                            | Description                         |
 |--------|-------------------------------------|-------------------------------------|
-| GET    | /auth/profile/                       | Retrieve user profile               |
-| GET    | /auth/users/                         | Retrieve a list of users            |
-| GET    | /auth/users/search/                  | Search for a user                   |
+| GET    | /auth/profile/                      | Retrieve user profile               |
+| GET    | /auth/users/                        | Retrieve a list of users            |
+| GET    | /auth/users/search/                 | Search for a user                   |
 | GET    | /app/connections/                   | Retrieve all connections            |
 | GET    | /app/connections/{id}/              | Retrieve a connection by ID         |
 | GET    | /app/stories/                       | Retrieve a list of stories          |
@@ -99,3 +102,64 @@ Here is a list of available GET API endpoints:
 | GET    | /app/announcements/user/{user_id}/  | Retrieve announcements by user      |
 | GET    | /app/sharings/                      | Retrieve all sharings               |
 | GET    | /app/sharings/{id}/                 | Retrieve a sharing by ID            |
+| GET    | /auth/activate-user/{id}/           | Activate User Account               |
+| GET    | /auth/deactivate/{id}/              | Deactivate User Account             |
+
+### POST Endpoints
+
+Here is a list of available POST API endpoints:
+
+| Method | Endpoint                          | Description                            |
+|--------|-----------------------------------|----------------------------------------|
+| POST   | /auth/token/                      | Login                                  |
+| POST   | /app/register-host/               | Register a host                        |
+| POST   | /app/register_camp/               | Register a camp admin                  |
+| POST   | /app/register-ngo/                | Register an NGO                        |
+| POST   | /app/register_volunteer/          | Register a volunteer                   |
+| POST   | /app/register_idppre/             | Register an IDP pre                    |
+| POST   | /app/register_idp/                | Register an IDP                        |
+| POST   | /app/connections/                 | Create a connection                    |
+| POST   | /app/stories/                     | Create a story                         |
+| POST   | /app/upload/images/               | Upload images                          |
+| POST   | /app/comments/                    | Create a comment                       |
+| POST   | /app/complains/                   | Create a complain                      |
+| POST   | /app/reports/                     | Create a report                        |
+| POST   | /app/resources/                   | Create a resource                      |
+| POST   | /app/announcements/               | Create an announcement                 |
+| POST   | /app/sharings/                    | Create a sharing                       |
+| POST   | /accountmgt/update_password/      | Update users password                  |
+
+
+### PUT Endpoints
+
+Here is a list of available PUT API endpoints:
+
+| Method | Endpoint                          | Description                            |
+|--------|-----------------------------------|----------------------------------------|
+| PUT    | /app/stories/{id}/                | Update a story                         |
+| PUT    | /app/comments/{id}/update/        | Update a comment                       |
+| PUT    | /app/complains/{id}/update/       | Update a complain                      |
+| PUT    | /app/reports/{id}/update/         | Update a report                        |
+| PUT    | /app/resources/{id}/update/       | Update a resource                      |
+| PUT    | /app/resources/{id}/approve/      | Approve a resource                     |
+| PUT    | /app/announcements/{id}/update/   | Update an announcement                 |
+| PUT    | /app/sharings/{id}/update/        | Update a sharing                       |
+| PUT    | /accountmgt/host/{id}/            | Update a host account                  |
+| PUT    | /accountmgt/idp/{id}/             | Update an IDP account                  |
+| PUT    | /accountmgt/ngo/{id}/             | Update an NGO account                  |
+| PUT    | /accountmgt/camp/{id}/            | Update a camp admin account            |
+
+### DELETE Endpoints
+
+Here is a list of available DELETE API endpoints:
+
+| Method | Endpoint                          | Description                            |
+|--------|-----------------------------------|----------------------------------------|
+| DELETE | /app/connections/{id}/delete/     | Delete a connection                    |
+| DELETE | /app/stories/{id}/                | Delete a story                         |
+| DELETE | /app/comments/{id}/delete/        | Delete a comment                       |
+| DELETE | /app/complains/{id}/delete/       | Delete a complain                      |
+| DELETE | /app/reports/{id}/delete/         | Delete a report                        |
+| DELETE | /app/resources/{id}/delete/       | Delete a resource                      |
+| DELETE | /app/announcements/{id}/delete/   | Delete an announcement                 |
+| DELETE | /app/sharings/{id}/delete/        | Delete a sharing                       |
