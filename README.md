@@ -240,3 +240,282 @@ N/A (This endpoint does not require a JSON payload)
 
 **JSON Received:**
 Filtered User Profile in json
+
+### 5. Search Users
+
+**Description:**  
+API to search users by filtering first_name, last_name, email and phone_number
+
+**Endpoint:**  
+`/app/search-users/?phone_number=&first_name&last_name&email`
+
+**Method:**  
+GET
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+N/A (This endpoint does not require a JSON payload)
+
+**JSON Received:**
+Filtered User Profile in json
+
+
+### 6. Register Host
+
+**Description:**  
+API to Register Host
+
+**Endpoint:**  
+`/auth/register-host/`
+
+**Method:**  
+POST
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+```json
+{
+    "username": "string",
+    "email": "email",
+    "password": "password",
+    "firstname": "string",
+    "lastname": "string",
+    "capacity": int,
+    "preference": "string",
+    "language": "string",
+    "hosting_experience": "string",
+    "location": "string",
+    "contact_info": "string",
+    "legal_doc_id": "string",
+    "economic_status": "string",
+    "phone_number": "string",
+    "user_type": "Host"
+}
+```
+
+**JSON Received:**
+Json with user id
+
+### 7. Register Camp Admin 
+
+**Description:**  
+API to Register Camp Admin
+
+**Endpoint:**  
+`/auth/register_camp/`
+
+**Method:**  
+POST
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+```json
+{
+    "username": "string",
+    "email": "email",
+    "password": "password",
+    "firstname": "string",
+    "lastname": "string",
+    "name": "string",
+    "location": "string",
+    "capacity": int,
+    "current_population": int,
+    "demographic_info": "string",
+    "shelter_type": "string",
+    "economic_activities": "string",
+    "health_education_info": "string",
+    "status": "string",
+    "phone_number": "string",
+    "user_type": "Camp Admin"
+}
+
+```
+
+**JSON Received:**
+Json with user id
+
+### 8. Register NGO
+
+**Description:**  
+API to Register NGO 
+
+**Endpoint:**  
+`/auth/register-ngo/`
+
+**Method:**  
+POST
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+```json
+{
+    "username": "sting",
+    "email": "email",
+    "password": "password",
+    "name": "string",
+    "location": "string",
+    "capacity": int,
+    "legal_doc": "string",
+    "country": "sting",
+    "status": "Active",
+    "phone_number": "string",
+    "user_type": "NGO"
+}
+```
+**JSON Received:**
+Json with user id
+
+### 9. Register Volunteer
+
+**Description:**  
+API to Register Volunteer
+
+**Endpoint:**  
+`/auth/register_volunteer/`
+
+**Method:**  
+POST
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+```json
+{
+    "username": "string",
+    "email": "email",
+    "password": "password",
+    "firstname": "string",
+    "lastname": "string",
+    "location": "string",
+    "phone_number": "string",
+    "user_type": "Volunteer"
+}
+
+```
+**JSON Received:**
+Json with user id
+
+
+### 10. IDP Pre Registration
+
+**Description:**  
+API to register IDP Pre registration for verification
+
+**Endpoint:**  
+`/auth/register_idppre/`
+
+**Method:**  
+POST
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+```json
+{
+    "first_name": "string",
+    "last_name": "string",
+    "email": "email",
+    "phone_number": "string"
+}
+
+```
+
+**JSON Received:**
+Json with user id
+
+### 11. IDP registration
+
+**Description:**  
+API to Register IDP
+
+**Endpoint:**  
+`/auth/register_idp/`
+
+**Method:**  
+POST
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+```json
+{
+    "username": "string",
+    "password": "string",
+    "email": "email",  // Ensure this matches an existing IDPPre entry
+    "firstname": "string",
+    "lastname": "string",
+    "location": "string",
+    "phone_number": "string",
+    "place_of_origin": "string",
+    "contact_information": "string",
+    "household_composition": int,
+    "vulnerability_status": "string",
+    "health_status": "string",
+    "documentation_status": "string",
+    "education_level": "string",
+    "language_spoken": "string",
+    "previous_assistance_received": "string",
+    "protection_concerns": "string",
+    "economic_status": "string",
+    "is_verified": false,
+    "age": int,
+    "gender": "Male/ Female",
+    "user_type": "IDP"
+}
+
+```
+**JSON Received:**
+Json with user id
+
+### 12. Deactivate User Account
+
+**Description:**  
+API to Deactivate User Account and only used by super admin
+
+**Endpoint:**  
+`/auth/deactivate-user/user_id/`
+
+**Method:**  
+GET
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+N/A (This endpoint does not require a JSON payload)
+
+**JSON Received:**
+N/A (This endpoint does not require a JSON payload)
+
+### 13. Activate User Account
+
+**Description:**  
+API to Activate User Account and only used by super admin
+
+**Endpoint:**  
+`/auth/activate-user/user_id/`
+
+**Method:**  
+GET
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+N/A (This endpoint does not require a JSON payload)
+
+**JSON Received:**
+N/A (This endpoint does not require a JSON payload)
+
+
