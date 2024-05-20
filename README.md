@@ -143,7 +143,7 @@ Here is a list of available DELETE API endpoints:
 
 ### GET Endpoints
 
-#### 1. User Login
+### 1. User Login
 
 **Description:**  
 Login for registered users.
@@ -173,7 +173,7 @@ NO
 }
 ```
 
-#### 2. Retrieve User Profile
+### 2. Retrieve User Profile
 
 **Description:**  
 Retrieve the profile information of the authenticated user.
@@ -194,7 +194,7 @@ N/A (This endpoint does not require a JSON payload)
 User Profile in json
 
 
-#### 3. Retrieve List of users
+### 3. Retrieve List of users
 
 **Description:**  
 Retrieve the List of all user name with id.
@@ -221,7 +221,7 @@ N/A (This endpoint does not require a JSON payload)
     }
 ]
 ```
-#### 4. Search Users
+### 4. Search Users
 
 **Description:**  
 API to search users by filtering first_name, last_name, email and phone_number
