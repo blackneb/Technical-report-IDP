@@ -172,9 +172,7 @@ NO
     "access": "access token"
 }
 ```
-
-### 2. Retrieve User Profile
-
+### <span style="color: blue;">2. Retrieve User Profile</span>
 **Description:**  
 Retrieve the profile information of the authenticated user.
 
