@@ -74,17 +74,28 @@ socket.onmessage = function(event) {
 
 ## API Endpoints
 
-Here is a list of available API endpoints:
+Here is a list of available GET API endpoints:
 
-| Method | Endpoint                  | Description                       |
-|--------|---------------------------|-----------------------------------|
-| GET    | /api/users/               | Retrieve a list of users          |
-| POST   | /api/users/               | Create a new user                 |
-| GET    | /api/users/{id}/          | Retrieve a specific user by ID    |
-| PUT    | /api/users/{id}/          | Update a specific user by ID      |
-| DELETE | /api/users/{id}/          | Delete a specific user by ID      |
-| GET    | /api/health_records/      | Retrieve a list of health records |
-| POST   | /api/health_records/      | Create a new health record        |
-| GET    | /api/health_records/{id}/ | Retrieve a specific health record |
-| PUT    | /api/health_records/{id}/ | Update a specific health record   |
-| DELETE | /api/health_records/{id}/ | Delete a specific health record   |
+| Method | Endpoint                            | Description                         |
+|--------|-------------------------------------|-------------------------------------|
+| GET    | /auth/profile/                       | Retrieve user profile               |
+| GET    | /auth/users/                         | Retrieve a list of users            |
+| GET    | /auth/users/search/                  | Search for a user                   |
+| GET    | /app/connections/                   | Retrieve all connections            |
+| GET    | /app/connections/{id}/              | Retrieve a connection by ID         |
+| GET    | /app/stories/                       | Retrieve a list of stories          |
+| GET    | /app/stories/{id}/                  | Retrieve a story by ID              |
+| GET    | /app/getstorybyid/{id}/             | Retrieve stories of connected users |
+| GET    | /app/comments/{id}/                 | Retrieve a comment by ID            |
+| GET    | /app/complains/                     | Retrieve all complains              |
+| GET    | /app/complains/{id}/                | Retrieve a complain by ID           |
+| GET    | /app/reports/                       | Retrieve all reports                |
+| GET    | /app/reports/{id}/                  | Retrieve a report by ID             |
+| GET    | /app/resources/                     | Retrieve all resources              |
+| GET    | /app/resources/{id}/                | Retrieve a resource by ID           |
+| GET    | /app/resources/user/{user_id}/      | Retrieve resources by user          |
+| GET    | /app/announcements/                 | Retrieve all announcements          |
+| GET    | /app/announcements/{id}/            | Retrieve an announcement by ID      |
+| GET    | /app/announcements/user/{user_id}/  | Retrieve announcements by user      |
+| GET    | /app/sharings/                      | Retrieve all sharings               |
+| GET    | /app/sharings/{id}/                 | Retrieve a sharing by ID            |
