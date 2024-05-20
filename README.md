@@ -221,23 +221,17 @@ N/A (This endpoint does not require a JSON payload)
 ```
 ### 4. Search Users
 
-**Description:**  
-API to search users by filtering first_name, last_name, email and phone_number
+**Description:**  API to search users by filtering first_name, last_name, email and phone_number
 
-**Endpoint:**  
-`/app/search-users/?phone_number=&first_name&last_name&email`
+**Endpoint:**  `/app/search-users/?phone_number=&first_name&last_name&email`
 
-**Method:**  
-GET
+**Method:**  GET
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
-**JSON to be Sent:**  
-N/A (This endpoint does not require a JSON payload)
+**JSON to be Sent:**  N/A (This endpoint does not require a JSON payload)
 
-**JSON Received:**
-Filtered User Profile in json
+**JSON Received:** Filtered User Profile in json
 
 ### 5. Search Users
 
