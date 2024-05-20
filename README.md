@@ -138,3 +138,105 @@ Here is a list of available DELETE API endpoints:
 | DELETE | /app/resources/{id}/delete/       | Delete a resource                      |
 | DELETE | /app/announcements/{id}/delete/   | Delete an announcement                 |
 | DELETE | /app/sharings/{id}/delete/        | Delete a sharing                       |
+
+## API Endpoints Details
+
+### GET Endpoints
+
+#### User Login
+
+**Description:**  
+Login for registered users.
+
+**Endpoint:**  
+`/auth/token/`
+
+**Method:**  
+POST
+
+**Authentication Required:**  
+NO
+
+**JSON to be Sent:**  
+```json
+{
+    "username":"username",
+    "password":"password"
+}
+```
+
+**JSON Received:**
+```json
+{
+    "refresh": "refrest token",
+    "access": "access token"
+}
+```
+
+#### Retrieve User Profile
+
+**Description:**  
+Retrieve the profile information of the authenticated user.
+
+**Endpoint:**  
+`/auth/profile/`
+
+**Method:**  
+GET
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+N/A (This endpoint does not require a JSON payload)
+
+**JSON Received:**
+User Profile in json
+
+
+#### Retrieve List of users
+
+**Description:**  
+Retrieve the List of all user name with id.
+
+**Endpoint:**  
+`/auth/users/`
+
+**Method:**  
+GET
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+N/A (This endpoint does not require a JSON payload)
+
+**JSON Received:**
+
+```json
+[
+    {
+        "id": 2,
+        "username": "anteneh"
+    }
+]
+```
+#### Search Users
+
+**Description:**  
+API to search users by filtering first_name, last_name, email and phone_number
+
+**Endpoint:**  
+`/app/search-users/?phone_number=&first_name&last_name&email`
+
+**Method:**  
+GET
+
+**Authentication Required:**  
+Yes
+
+**JSON to be Sent:**  
+N/A (This endpoint does not require a JSON payload)
+
+**JSON Received:**
+Filtered User Profile in json
