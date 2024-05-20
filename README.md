@@ -71,3 +71,20 @@ const socket = new WebSocket('ws://127.0.0.1:8000/ws/some_endpoint/');
 socket.onmessage = function(event) {
     console.log('Message from server ', event.data);
 };
+
+## API Endpoints
+
+Here is a list of available API endpoints:
+
+| Method | Endpoint                  | Description                       |
+|--------|---------------------------|-----------------------------------|
+| GET    | /api/users/               | Retrieve a list of users          |
+| POST   | /api/users/               | Create a new user                 |
+| GET    | /api/users/{id}/          | Retrieve a specific user by ID    |
+| PUT    | /api/users/{id}/          | Update a specific user by ID      |
+| DELETE | /api/users/{id}/          | Delete a specific user by ID      |
+| GET    | /api/health_records/      | Retrieve a list of health records |
+| POST   | /api/health_records/      | Create a new health record        |
+| GET    | /api/health_records/{id}/ | Retrieve a specific health record |
+| PUT    | /api/health_records/{id}/ | Update a specific health record   |
+| DELETE | /api/health_records/{id}/ | Delete a specific health record   |
