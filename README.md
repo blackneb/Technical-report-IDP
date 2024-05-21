@@ -459,3 +459,156 @@ User Profile in json
 }
 ```
 
+
+### 14. Update Host Account
+
+**Description:**  API to Update the Host information
+
+**Endpoint:**  `/accountmgt/hosts/id/`
+
+**Method:**  PUT
+
+**Authentication Required:**  Yes
+
+**JSON to be Sent:**
+```json
+{
+  "capacity": int,
+  "preference": "string",
+  "language": "string",
+  "hosting_experience": "string",
+  "location": "string",
+  "contact_info": "string",
+  "legal_doc_id": "string",
+  "economic_status": "string"
+}
+
+```
+
+**JSON Received:** Json with user id
+
+### 15. Update IDP Account
+
+**Description:**  API to update the IDP Account
+
+**Endpoint:**  `/accountmgt/idps/id/`
+
+**Method:**  PUT
+
+**Authentication Required:**  Yes
+
+**JSON to be Sent:**  
+```json
+{
+  "place_of_origin": "string",
+  "contact_information": "string",
+  "household_composition": int,
+  "vulnerability_status": "string",
+  "health_status": "string",
+  "documentation_status": "string",
+  "education_level": "string",
+  "language_spoken": "string",
+  "previous_assistance_received": "string",
+  "protection_concerns": "string",
+  "economic_status": "string",
+  "is_verified": true,
+  "age": 30,
+  "gender": "Female"
+}
+
+```
+
+**JSON Received:** Json with user id
+
+### 16. Update NGO Account
+
+**Description:**  API to Update NGO Account
+
+**Endpoint:**  `/accountmgt/ngos/id/`
+
+**Method:**  PUT
+
+**Authentication Required:**  Yes
+
+**JSON to be Sent:** 
+```json
+{
+  "location": "string",
+  "capacity": int,
+  "name": "string",
+  "legal_doc": "string",
+  "country": "string",
+  "status": "Active"
+}
+
+```
+
+**JSON Received:** Json with user id
+
+### 17.  update Camp Account
+
+**Description:**  API to update camp account
+
+**Endpoint:**  `/accountmgt/camps/id/`
+
+**Method:**  PUT
+
+**Authentication Required:**  Yes
+
+**JSON to be Sent:**  
+```json
+{
+  "name": "string",
+  "location": "string",
+  "capacity": int,
+  "current_population": int,
+  "demographic_info": "string",
+  "shelter_type": "string",
+  "economic_activities": "string",
+  "health_education_info": "string",
+  "status": "string"
+}
+
+```
+
+**JSON Received:**  Json with user id
+
+### 18. Profile image upload 
+
+**Description:**  API to upload the user profile image
+
+**Endpoint:**  `/accountmgt/upload_image/`
+
+**Method:**  POST
+
+**Authentication Required:**  Yes
+
+**JSON to be Sent:**  Form data with "image"
+**JSON Received:** Status of 200 with data json
+
+### 19. Change Password
+
+**Description:**  API to Change the user password
+
+**Endpoint:**  `/accountmgt/update_password/`
+
+**Method:**  PUT
+
+**Authentication Required:**  Yes
+
+**JSON to be Sent:**  
+```json
+{
+  "old_password": "old_password",
+  "new_password": "new_password"
+}
+
+```
+
+**JSON Received:** 
+```json
+{
+    "message": "Password updated successfully"
+}
+```
+
