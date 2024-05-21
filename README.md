@@ -145,17 +145,13 @@ Here is a list of available DELETE API endpoints:
 
 ### 1. User Login
 
-**Description:**  
-Login for registered users.
+**Description:**  Login for registered users.
 
-**Endpoint:**  
-`/auth/token/`
+**Endpoint:**  `/auth/token/`
 
-**Method:**  
-POST
+**Method:**  POST
 
-**Authentication Required:**  
-NO
+**Authentication Required:**  NO
 
 **JSON to be Sent:**  
 ```json
@@ -176,14 +172,11 @@ NO
 **Description:**  
 Retrieve the profile information of the authenticated user.
 
-**Endpoint:**  
-`/auth/profile/`
+**Endpoint:**  `/auth/profile/`
 
-**Method:**  
-GET
+**Method:**  GET
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
 **JSON to be Sent:**  
 N/A (This endpoint does not require a JSON payload)
@@ -194,20 +187,15 @@ User Profile in json
 
 ### 3. Retrieve List of users
 
-**Description:**  
-Retrieve the List of all user name with id.
+**Description:**  Retrieve the List of all user name with id.
 
-**Endpoint:**  
-`/auth/users/`
+**Endpoint:**  `/auth/users/`
 
-**Method:**  
-GET
+**Method:**  GET
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
-**JSON to be Sent:**  
-N/A (This endpoint does not require a JSON payload)
+**JSON to be Sent:**  N/A (This endpoint does not require a JSON payload)
 
 **JSON Received:**
 
@@ -235,38 +223,28 @@ N/A (This endpoint does not require a JSON payload)
 
 ### 5. Search Users
 
-**Description:**  
-API to search users by filtering first_name, last_name, email and phone_number
+**Description:**  API to search users by filtering first_name, last_name, email and phone_number
 
-**Endpoint:**  
-`/app/search-users/?phone_number=&first_name&last_name&email`
+**Endpoint:**  `/app/search-users/?phone_number=&first_name&last_name&email`
 
-**Method:**  
-GET
+**Method:**  GET
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
-**JSON to be Sent:**  
-N/A (This endpoint does not require a JSON payload)
+**JSON to be Sent:**  N/A (This endpoint does not require a JSON payload)
 
-**JSON Received:**
-Filtered User Profile in json
+**JSON Received:**    Filtered User Profile in json
 
 
 ### 6. Register Host
 
-**Description:**  
-API to Register Host
+**Description:**  API to Register Host
 
-**Endpoint:**  
-`/auth/register-host/`
+**Endpoint:**  `/auth/register-host/`
 
-**Method:**  
-POST
+**Method:**  POST
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
 **JSON to be Sent:**  
 ```json
@@ -289,22 +267,17 @@ Yes
 }
 ```
 
-**JSON Received:**
-Json with user id
+**JSON Received:**  Json with user id
 
 ### 7. Register Camp Admin 
 
-**Description:**  
-API to Register Camp Admin
+**Description:**  API to Register Camp Admin
 
-**Endpoint:**  
-`/auth/register_camp/`
+**Endpoint:**  `/auth/register_camp/`
 
-**Method:**  
-POST
+**Method:**  POST
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
 **JSON to be Sent:**  
 ```json
@@ -329,22 +302,17 @@ Yes
 
 ```
 
-**JSON Received:**
-Json with user id
+**JSON Received:**    Json with user id
 
 ### 8. Register NGO
 
-**Description:**  
-API to Register NGO 
+**Description:**  API to Register NGO 
 
-**Endpoint:**  
-`/auth/register-ngo/`
+**Endpoint:**  `/auth/register-ngo/`
 
-**Method:**  
-POST
+**Method:**  POST
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
 **JSON to be Sent:**  
 ```json
@@ -362,22 +330,17 @@ Yes
     "user_type": "NGO"
 }
 ```
-**JSON Received:**
-Json with user id
+**JSON Received:**    Json with user id
 
 ### 9. Register Volunteer
 
-**Description:**  
-API to Register Volunteer
+**Description:**  API to Register Volunteer
 
-**Endpoint:**  
-`/auth/register_volunteer/`
+**Endpoint:**  `/auth/register_volunteer/`
 
-**Method:**  
-POST
+**Method:**  POST
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
 **JSON to be Sent:**  
 ```json
@@ -393,23 +356,18 @@ Yes
 }
 
 ```
-**JSON Received:**
-Json with user id
+**JSON Received:** Json with user id
 
 
 ### 10. IDP Pre Registration
 
-**Description:**  
-API to register IDP Pre registration for verification
+**Description:**  API to register IDP Pre registration for verification
 
-**Endpoint:**  
-`/auth/register_idppre/`
+**Endpoint:**  `/auth/register_idppre/`
 
-**Method:**  
-POST
+**Method:**  POST
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
 **JSON to be Sent:**  
 ```json
@@ -422,22 +380,17 @@ Yes
 
 ```
 
-**JSON Received:**
-Json with user id
+**JSON Received:**    Json with user id
 
 ### 11. IDP registration
 
-**Description:**  
-API to Register IDP
+**Description:**  API to Register IDP
 
-**Endpoint:**  
-`/auth/register_idp/`
+**Endpoint:**  `/auth/register_idp/`
 
-**Method:**  
-POST
+**Method:**  POST
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
 **JSON to be Sent:**  
 ```json
@@ -467,47 +420,42 @@ Yes
 }
 
 ```
-**JSON Received:**
-Json with user id
-
+**JSON Received:**    Json with user id
+    
 ### 12. Deactivate User Account
 
-**Description:**  
-API to Deactivate User Account and only used by super admin
+**Description:**  API to Deactivate User Account and only used by super admin
 
-**Endpoint:**  
-`/auth/deactivate-user/user_id/`
+**Endpoint:**  `/auth/deactivate-user/user_id/`
 
-**Method:**  
-GET
+**Method:**  GET
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
-**JSON to be Sent:**  
-N/A (This endpoint does not require a JSON payload)
+**JSON to be Sent:**  N/A (This endpoint does not require a JSON payload)
 
 **JSON Received:**
-N/A (This endpoint does not require a JSON payload)
-
+```json
+{
+    "message": "User deactivated successfully"
+}
+```
 ### 13. Activate User Account
 
-**Description:**  
-API to Activate User Account and only used by super admin
+**Description:**  API to Activate User Account and only used by super admin
 
-**Endpoint:**  
-`/auth/activate-user/user_id/`
+**Endpoint:**  `/auth/activate-user/user_id/`
 
-**Method:**  
-GET
+**Method:**  GET
 
-**Authentication Required:**  
-Yes
+**Authentication Required:**  Yes
 
-**JSON to be Sent:**  
-N/A (This endpoint does not require a JSON payload)
+**JSON to be Sent:**  N/A (This endpoint does not require a JSON payload)
 
 **JSON Received:**
-N/A (This endpoint does not require a JSON payload)
-
+```json
+{
+    "message": "User activated successfully"
+}
+```
 
